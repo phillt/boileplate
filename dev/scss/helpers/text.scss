@@ -1,0 +1,43 @@
+/**
+ |---------------------------------
+ | Text modifiers
+ |---------------------------------
+ |
+ | All text modifications
+ |
+ | @author Felipe Tadeo
+ */
+
+.text-{
+  /**
+   * Text alignment
+   */
+  &align_{
+    &center{
+      text-align: center !important;
+    }
+    &left{
+      text-align: left !important;
+    }
+    &right{
+      text-align: right !important;
+    }
+  }
+
+  /**
+   * Modify Text
+   */
+
+   &sm{
+     font-size: 90% !important;
+   }
+   &md{
+     font-size: 110% !important;
+   }
+   &lg{
+     font-size: 180% !important;
+   }
+   &-xlg{
+     font-size: 200% !important;
+   }
+}

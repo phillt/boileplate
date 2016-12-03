@@ -1,0 +1,269 @@
+/**
+ |---------------------------------
+ | Modifires
+ |---------------------------------
+ |
+ | These are quick styles that can be applied inline to give a quick style boost.
+ |
+ | @author Felipe Tadeo
+ */
+// Backgrounds
+
+.align{
+  &-items{
+    align-items: stretch;
+  }
+}
+
+.background {
+    // Images
+
+    // Positioning
+    &-position {
+        &_center_center {
+            background-position: center center;
+        }
+
+        &_center_top {
+            background-position: center top;
+        }
+
+        &_center_bottom {
+            background-position: center bottom;
+        }
+    }
+    // Size
+    &-size {
+        &_cover {
+            background-size: cover;
+        }
+    }
+}
+
+.color {
+    // Add color modifiers here
+}
+
+.display{
+  &_inline-block{
+    display: inline-block !important;
+  }
+  &_table{
+    display: table !important;
+  }
+  &_table-cell{
+    display: table-cell !important;
+  }
+  &_flex{
+
+    &-lg{
+      @media (min-width: $value_lg){
+        display: flex !important;
+      }
+    }
+
+    &-md{
+      @media (min-width: $value_md) and (max-width: $value_lg){
+        display: flex !important;
+      }
+    }
+
+    &-sm{
+      @media (max-width: $value_md) and (min-width: $value_sm){
+        display: flex !important;
+      }
+    }
+
+    &-xs{
+      @media (max-width: $value_xs){
+        display: flex !important;
+      }
+    }
+
+  }
+}
+
+
+.accesory {
+    // Add accesories
+}
+
+.margin{
+  &-bottom{
+    &_none{
+      margin-bottom: 0px !important;
+    }
+
+    &_low{
+      margin-bottom: $value_spacing-margin_low !important;
+    }
+  }
+}
+
+.padding {
+    padding: $value_spacing-padding;
+
+    &_high{
+      padding: $value_spacing-padding-high !important;
+    }
+
+    &-sides {
+        padding-left: $value_spacing-padding;
+        padding-right: $value_spacing-padding;
+        &_none {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        &_low {
+            padding-left: $value_spacing-padding_low !important;
+            padding-right: $value_spacing-padding_low !important;
+        }
+    }
+
+    &-top {
+      padding-top: $value_spacing-padding;
+
+        &_none {
+            padding-top: none !important;
+        }
+
+        &_low {
+            padding-top: $value_spacing-padding_low !important;
+        }
+
+    }
+
+    &-bottom {
+        &_none {
+            padding-bottom: none !important;
+        }
+
+        &_low {
+            padding-bottom: $value_spacing-padding_low !important;
+        }
+    }
+
+    &-left {
+        &_none {
+            padding-left: none !important;
+        }
+
+        &_low {
+            padding-left: $value_spacing-padding_low !important;
+        }
+    }
+
+    &-right {
+        &_none {
+            padding-right: none !important;
+        }
+
+        &_low {
+            padding-right: $value_spacing-padding_low !important;
+        }
+    }
+}
+
+.row-flex, .row-flex > .flex-col {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 1 auto;
+}
+
+.row-flex-wrap {
+	-webkit-flex-flow: row wrap;
+    align-content: flex-start;
+    flex:0;
+}
+
+.row-flex > .flex-col, .container-flex > .flex-col {
+	 margin:-.2px; /* hack adjust for wrapping */
+}
+
+.container-flex > .flex-col div,.row-flex > .flex-col div {
+	width:100%;
+}
+
+
+.flex-col {
+    display: flex;
+    display: -webkit-flex;
+    flex: 1 100%;
+	flex-flow: column nowrap;
+}
+
+.flex-grow {
+	display: flex;
+    -webkit-flex: 2;
+    flex: 2;
+}
+
+.font_{
+    &-GaramondBold{
+      font-family: GaramondBold, Arial !important;
+    }
+}
+
+span[class*="header_"]{
+  font-size: 150%;
+}
+
+.header{
+  &_green{
+    color: $color-green;
+    &-light{
+      color: $color-green_neon;
+    }
+  }
+  &_white{
+    color: $color-font_secondary;
+  }
+}
+
+.cursor{
+  &-help{
+    cursor: help;
+  }
+}
+
+@media only screen and (min-width : 768px) {
+    .is-table-row {
+        display: table;
+    }
+    .is-table-row [class*="col-"]{
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+    }
+}
+
+@media screen and(min-width: $value_md) {
+    .low-gutter {
+        & > [class*='col-'] {
+            padding: {
+                right: $value_spacing-padding_low;
+                left: $value_spacing-padding_low;
+            }
+        }
+
+        &-inner {
+            & > [class*='col-'] {
+                &:first-of-type {
+                    padding-left: $value_spacing-padding;
+                }
+
+                &:last-of-type {
+                    padding-right: $value_spacing-padding;
+                }
+                padding: {
+                    right: $value_spacing-padding_low;
+                    left: $value_spacing-padding_low;
+                }
+            }
+        }
+    }
+}

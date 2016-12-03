@@ -1,0 +1,45 @@
+/**
+ |---------------------------------
+ | app
+ |---------------------------------
+ |
+ | Bootstrap all the stylsheets that are being used for this app.
+ |
+ | @author Felipe Tadeo
+ */
+
+/**
+ * Include all vendors
+ */
+ // Bootstrap
+ @import 'vendors/bootstrap/css/_bootstrap';
+
+
+ /**
+  * Load all shared items
+  */
+  @import 'shared/colors';
+  @import 'shared/values';
+  @import 'shared/fonts';
+  @import 'shared/images';
+
+ /**
+  * Load all Base Components
+  */
+ @import 'base/base';
+
+ /**
+  * Load all helpers
+  */
+ @import 'helpers/text';
+ @import 'helpers/font';
+ @import 'helpers/modifiers';
+
+ /**
+  * Load all components
+  */
+
+
+  /**
+   * layout sections
+   */

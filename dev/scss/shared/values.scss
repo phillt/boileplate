@@ -1,0 +1,28 @@
+/**
+ |---------------------------------
+ | Values
+ |---------------------------------
+ |
+ | Contains all the common values used through out the app.
+ |
+ | @author Felipe Tadeo
+ */
+
+
+// Borders
+
+$value_border-radious  : 10px;
+$value_border-radius   : $value_border-radious;
+
+$value_spacing-padding : 15px;
+$value_spacing-padding_low : 5px;
+$value_spacing-padding_high : 25px;
+$value_spacing-margin  : 15px;
+$value_spacing-margin_high  : 20px;
+$value_spacing-margin_low  : 5px;
+
+// mobile break points
+$value_xs : 767px;
+$value_sm : 767px;
+$value_md : 991px;
+$value_lg : 1199px;
